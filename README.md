@@ -1,12 +1,17 @@
-Docker Concepts & Flask Deployment
-Overview
-This repository contains a containerized Python Flask web application configured for automated cloud deployment.
-Core Concepts Summary
-Container: An isolated runtime environment packaging application code, dependencies, and system libraries.
-Image: A read-only template used to create running containers.
-Dockerfile: A text script containing automated build instructions to construct a Docker image.
-Docker Compose: A tool for defining and running multi-container Docker applications via a single configuration file.
-Live Application
-Framework: Python / Flask
-Deployment: Docker & Render CI/CD Pipeline
-Live App URL: https://my-docker-app-o43s.onrender.com
+# Docker Concepts & Live Web App Deployment
+
+## Core Concepts
+
+* **Containers:** Isolated runtime environments packaging application code and dependencies for consistent execution across systems.
+* **Images:** Read-only blueprints containing the OS runtime, dependencies, and code used to run containers.
+* **Dockerfile:** A build script specifying environment setup, dependencies, and execution commands (`FROM`, `COPY`, `RUN`, `CMD`).
+* **Docker Compose:** A tool for defining and orchestrating multi-container applications via a single `docker-compose.yml` configuration.
+
+---
+
+## Live Deployment
+
+* **Framework:** Python (Flask)
+* **Hosting Platform:** Render (Docker Web Service)
+* **GitHub Repository:** https://github.com/sadikur-63/my-docker-app
+* **Live Web URL:** https://my-docker-app-o43s.onrender.com
