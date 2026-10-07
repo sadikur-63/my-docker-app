@@ -1,5 +1,27 @@
+version: "3.8"
+
 services:
-  app:
-    image: my-docker-app:latest
+  # Container 1: Web Server (Nginx)
+  web-frontend:
+    image: nginx:alpine
+    container_name: web-frontend
     ports:
-      - "5000:5000"
+      - "8080:80"
+    restart: always
+
+  # Container 2: API Service (Node.js/Express mock)
+  api-service:
+    image: node:18-alpine
+    container_name: api-service
+    command: node -e "console.log('API running...'); setInterval(() => {}, 1000);"
+    restart: always
+
+  # Container 3: Database (PostgreSQL)
+  database:
+    image: postgres:15-alpine
+    container_name: database
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: appdb
+    restart: always
